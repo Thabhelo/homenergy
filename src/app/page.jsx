@@ -1286,7 +1286,7 @@ function MainComponent() {
                   </h3>
                   <div className="h-64 bg-gray-100 rounded">
                     <div className="w-full h-full" id="energy-chart">
-                    <div className="h-40">
+                    <div className="h-60">
                       <Recharts.ResponsiveContainer width="100%" height="100%">
                         <Recharts.BarChart data={energyData}>
                           <Recharts.CartesianGrid strokeDasharray="3 3" />
