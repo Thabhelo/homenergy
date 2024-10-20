@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { useState } from 'react';
 import * as Recharts from "recharts";
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>;
 
@@ -1284,7 +1285,19 @@ function MainComponent() {
                     Daily Consumption
                   </h3>
                   <div className="h-64 bg-gray-100 rounded">
-                    <div className="w-full h-full" id="energy-chart"></div>
+                    <div className="w-full h-full" id="energy-chart">
+                    <div className="h-40">
+                      <Recharts.ResponsiveContainer width="100%" height="100%">
+                        <Recharts.BarChart data={energyData}>
+                          <Recharts.CartesianGrid strokeDasharray="3 3" />
+                          <Recharts.XAxis dataKey="name" />
+                          <Recharts.YAxis />
+                          <Recharts.Tooltip />
+                          <Recharts.Bar dataKey="usage" fill="#8884d8" />
+                        </Recharts.BarChart>
+                      </Recharts.ResponsiveContainer>
+                    </div>
+                    </div>
                   </div>
                 </div>
                 <div className="mb-6">
